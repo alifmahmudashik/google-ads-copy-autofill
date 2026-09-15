@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Ads Copy Fillup",
+  "version": "2.0",
+  "description": "Fill, copy & manage Google Ads headlines and descriptions instantly.",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "host_permissions": ["https://ads.google.com/*"]
+}

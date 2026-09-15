@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ads Copy Fillup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="header">
+      <img src="img/icon48.png" alt="logo" class="logo">
+      <div>
+        <h1 class="title">Ads Copy Fillup</h1>
+        <p class="subtitle">Google Ads Asset Manager</p>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" id="tabHeadlines" data-tab="headlines">
+        <span class="tab-icon">H</span> Headlines
+      </button>
+      <button class="tab-btn" id="tabLongHeadlines" data-tab="long-headlines">
+        <span class="tab-icon">L</span> Long
+      </button>
+      <button class="tab-btn" id="tabDescriptions" data-tab="descriptions">
+        <span class="tab-icon">D</span> Descriptions
+      </button>
+    </div>
+
+    <!-- Headlines Section -->
+    <div class="tab-content active" id="section-headlines">
+      <div class="info-bar">
+        <span class="info-text">Max 30 chars per headline · Up to 15 headlines</span>
+      </div>
+      <textarea
+        id="headlinesInput"
+        class="textarea"
+        rows="7"
+        placeholder="Enter one headline per line&#10;e.g.&#10;Best Deals Online&#10;Shop Now &amp; Save&#10;Free Shipping Today"
+      ></textarea>
+      <div class="char-hint" id="headlineCharHint"></div>
+      <div class="btn-group">
+        <button class="btn btn-primary" id="fillHeadlinesBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+          Fill Headlines
+        </button>
+        <button class="btn btn-secondary" id="copyHeadlinesBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+          Copy from Page
+        </button>
+        <button class="btn btn-danger" id="removeHeadlinesBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zm0 5a1 1 0 012 0v6a1 1 0 11-2 0V7z" clip-rule="evenodd"/></svg>
+          Clear All
+        </button>
+      </div>
+      <div class="status" id="headlineStatus"></div>
+    </div>
+
+    <!-- Long Headlines Section -->
+    <div class="tab-content" id="section-long-headlines">
+      <div class="info-bar">
+        <span class="info-text">Max 90 chars per long headline · Up to 5 long headlines</span>
+      </div>
+      <textarea
+        id="longHeadlinesInput"
+        class="textarea"
+        rows="7"
+        placeholder="Enter one long headline per line&#10;e.g.&#10;Discover the Best Deals on Premium Products Today&#10;Shop Our Exclusive Collection and Save Big Now"
+      ></textarea>
+      <div class="char-hint" id="longHeadlineCharHint"></div>
+      <div class="btn-group">
+        <button class="btn btn-purple" id="fillLongHeadlinesBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+          Fill Long Headlines
+        </button>
+        <button class="btn btn-secondary" id="copyLongHeadlinesBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+          Copy from Page
+        </button>
+        <button class="btn btn-danger" id="removeLongHeadlinesBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zm0 5a1 1 0 012 0v6a1 1 0 11-2 0V7z" clip-rule="evenodd"/></svg>
+          Clear All
+        </button>
+      </div>
+      <div class="status" id="longHeadlineStatus"></div>
+    </div>
+
+    <!-- Descriptions Section -->
+    <div class="tab-content" id="section-descriptions">
+      <div class="info-bar">
+        <span class="info-text">Max 90 chars per description · Up to 5 descriptions</span>
+      </div>
+      <textarea
+        id="descriptionsInput"
+        class="textarea"
+        rows="7"
+        placeholder="Enter one description per line&#10;e.g.&#10;Get the best products at unbeatable prices. Shop today and save big!&#10;Fast shipping available on all orders. Order now for exclusive deals."
+      ></textarea>
+      <div class="char-hint" id="descriptionCharHint"></div>
+      <div class="btn-group">
+        <button class="btn btn-green" id="fillDescriptionsBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+          Fill Descriptions
+        </button>
+        <button class="btn btn-secondary" id="copyDescriptionsBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+          Copy from Page
+        </button>
+        <button class="btn btn-danger" id="removeDescriptionsBtn">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zm0 5a1 1 0 012 0v6a1 1 0 11-2 0V7z" clip-rule="evenodd"/></svg>
+          Clear All
+        </button>
+      </div>
+      <div class="status" id="descriptionStatus"></div>
+    </div>
+
+    <div class="footer">
+      made by <a href="https://alifmahmud.com" target="_blank">alifmahmud.com</a>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
