@@ -39,13 +39,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Helpers ────────────────────────────────────────────────
   function showStatus(id, message, type = 'success') {
+    document.querySelectorAll('.status').forEach(s => {
+      if (s.id !== id) {
+        s.textContent = '';
+        s.className = 'status';
+      }
+    });
     const el       = document.getElementById(id);
     if (!el) return;
     el.textContent = message;
     el.className   = 'status ' + type;
     setTimeout(() => {
-      el.textContent = '';
-      el.className   = 'status';
+      if (el.textContent === message) {
+        el.textContent = '';
+        el.className   = 'status';
+      }
     }, 3500);
   }
 
