@@ -19,6 +19,31 @@
       </div>
     </div>
 
+    <!-- Quick Actions Card (Copy All & Quick Paste) -->
+    <div class="quick-card">
+      <div class="quick-card-header">
+        <span class="quick-card-label">
+          <svg class="quick-card-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"/>
+            <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"/>
+          </svg>
+          Quick Actions
+        </span>
+        <span class="quick-card-tag">All-in-One</span>
+      </div>
+      <div class="quick-btn-group">
+        <button class="btn btn-quick-page" id="copyAllFromPageBtn" title="Extract headlines, long headlines & descriptions from Google Ads to clipboard and fields">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg>
+          <span class="btn-text">Copy All from Page</span>
+        </button>
+        <button class="btn btn-quick-all" id="quickPasteBtn" title="Auto-paste clipboard copy and fill Google Ads fields">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h6a1 1 0 100-2H7zm0 4a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+          <span class="btn-text">Quick Paste to Page</span>
+        </button>
+      </div>
+      <div class="status" id="quickStatus"></div>
+    </div>
+
     <div class="tabs">
       <button class="tab-btn active" id="tabHeadlines" data-tab="headlines">
         <span class="tab-icon">H</span> Headlines

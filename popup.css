@@ -52,6 +52,91 @@ body {
   margin-top: 1px;
 }
 
+/* ── Quick Copy Card ────────────────────────────────── */
+.quick-card {
+  background: white;
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #e0e7ff;
+}
+
+.quick-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quick-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #4338ca;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quick-card-icon {
+  width: 13px;
+  height: 13px;
+  color: #4f46e5;
+}
+
+.quick-card-tag {
+  font-size: 10px;
+  font-weight: 600;
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid #c7d2fe;
+}
+
+.quick-btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.quick-btn-group .btn {
+  padding: 8px 10px;
+  font-size: 11.5px;
+}
+
+.btn-quick-page {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.28);
+}
+
+.btn-quick-page:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.38);
+}
+
+.btn-quick-all {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.28);
+}
+
+.btn-quick-all:hover {
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.38);
+}
+
+.btn-copied,
+.btn-pasted {
+  background: #16a34a !important;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3) !important;
+}
+
+.quick-card .status:empty {
+  display: none;
+}
+
 /* ── Tabs ───────────────────────────────────────────── */
 .tabs {
   display: flex;
